@@ -23,11 +23,11 @@ public class StringPermutation {
 			res.add(new ArrayList<>(tempList));
 		} else {
 			for (int i = 0; i < str.length(); i++) {
-				char temp = str.charAt(i);
-				if (tempList.contains(String.valueOf(temp))) {
+				String temp = String.valueOf(str.charAt(i));
+				if (tempList.contains(temp)) {
 					continue;
 				}
-				tempList.add(String.valueOf(temp));
+				tempList.add(temp);
 				getPermutation(res, tempList, str);
 				tempList.remove(tempList.size() - 1);
 			}
